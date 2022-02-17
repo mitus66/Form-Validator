@@ -132,7 +132,7 @@ class FormValidator
 2. На странице, принимающей массив $_POST проверяем введенные данные:
 
 // 2.1. подключаем файл класса 
-require_onse FormValidator.php 
+require_onse 'FormValidator.php'; 
 и создаем экземпляр класса 
 $validate = new FormValidator;
 
