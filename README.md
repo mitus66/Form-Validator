@@ -18,7 +18,7 @@ class FormValidator
         $this->email = $email;
 
         // удаляем пустые символы
-        $$email = trim( $email);
+        $email = trim( $email);
 
         // защищаемся от спецсимволов
         $email = htmlspecialchars($email);
@@ -138,8 +138,13 @@ $validate = new FormValidator;
 
 // 2.2. проверяем конкретные данные, если истина, то выполняем требуемое действие:
 if ($validate->checkEmail($_POST['email'])) {  }
+
 if ($validate->checkPassword($_POST['password'])) {  }
+
 if ($validate->checkPasswordConfirm($_POST['password'], $_POST['passwordConfirm'])) {  }
+
 if ($validate->checkPhone($_POST['phone'])) {  }
+
 if ($validate->checkUrl($_POST['url'])) {  }
+
 if ($validate->checkName($_POST['name'])) {  }
